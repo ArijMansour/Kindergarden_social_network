@@ -27,6 +27,7 @@ public class Notes implements Serializable{
 	
 	 @Enumerated(EnumType.STRING ) 
 	 private Subject_note subject_note ;
+	 @Enumerated(EnumType.STRING ) 
 	 private Type_Note type_note ; 
 	 
 
