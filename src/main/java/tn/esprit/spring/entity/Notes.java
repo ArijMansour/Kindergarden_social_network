@@ -3,7 +3,8 @@ package tn.esprit.spring.entity;
 import java.io.Serializable;
 
 import java.util.* ;
-
+import tn.esprit.spring.entity.Subject_note;
+import tn.esprit.spring.entity.Type_Notes;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
