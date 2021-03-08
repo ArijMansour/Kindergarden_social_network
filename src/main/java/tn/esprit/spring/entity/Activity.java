@@ -1,15 +1,22 @@
 package tn.esprit.spring.entity;
 
 import java.io.Serializable;
-import java.util.* ; 
+import java.util.* ;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table; 
+@Entity 
+@Table(name="T_Activity")
 public class Activity implements  Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="Activity_ID")
 	private Long Activity_Id ; 
 	private String Activity_Name ; 
 	private String Activity_Type ; 
@@ -18,8 +25,6 @@ public class Activity implements  Serializable{
 	private String Activity_Description ; 
 	private String Activity_Image ; 
 
-	public Activity() {
-		// TODO Auto-generated constructor stub
-	}
+	
 
 }
