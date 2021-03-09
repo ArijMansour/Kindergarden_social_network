@@ -22,7 +22,92 @@ public class Posts implements Serializable {
 	private Long Post_Id ; 
 	private Date Post_Date ;
 	private String Post_Description ; 
-	private String post_Title ; 
+	private String post_Title ;
+	public Long getPost_Id() {
+		return Post_Id;
+	}
+	public void setPost_Id(Long post_Id) {
+		Post_Id = post_Id;
+	}
+	public Date getPost_Date() {
+		return Post_Date;
+	}
+	public void setPost_Date(Date post_Date) {
+		Post_Date = post_Date;
+	}
+	public String getPost_Description() {
+		return Post_Description;
+	}
+	public void setPost_Description(String post_Description) {
+		Post_Description = post_Description;
+	}
+	public String getPost_Title() {
+		return post_Title;
+	}
+	public void setPost_Title(String post_Title) {
+		this.post_Title = post_Title;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((Post_Date == null) ? 0 : Post_Date.hashCode());
+		result = prime * result + ((Post_Description == null) ? 0 : Post_Description.hashCode());
+		result = prime * result + ((Post_Id == null) ? 0 : Post_Id.hashCode());
+		result = prime * result + ((post_Title == null) ? 0 : post_Title.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Posts other = (Posts) obj;
+		if (Post_Date == null) {
+			if (other.Post_Date != null)
+				return false;
+		} else if (!Post_Date.equals(other.Post_Date))
+			return false;
+		if (Post_Description == null) {
+			if (other.Post_Description != null)
+				return false;
+		} else if (!Post_Description.equals(other.Post_Description))
+			return false;
+		if (Post_Id == null) {
+			if (other.Post_Id != null)
+				return false;
+		} else if (!Post_Id.equals(other.Post_Id))
+			return false;
+		if (post_Title == null) {
+			if (other.post_Title != null)
+				return false;
+		} else if (!post_Title.equals(other.post_Title))
+			return false;
+		return true;
+	}
+	@Override
+	public String toString() {
+		return "Posts [Post_Id=" + Post_Id + ", Post_Date=" + Post_Date + ", Post_Description=" + Post_Description
+				+ ", post_Title=" + post_Title + "]";
+	}
+	public Posts(Long post_Id, Date post_Date, String post_Description, String post_Title) {
+		super();
+		Post_Id = post_Id;
+		Post_Date = post_Date;
+		Post_Description = post_Description;
+		this.post_Title = post_Title;
+	}
+	public Posts() {
+		super();
+		// TODO Auto-generated constructor stub
+	} 
+	
 	
 
 }
