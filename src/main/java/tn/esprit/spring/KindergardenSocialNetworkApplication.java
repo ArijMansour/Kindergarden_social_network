@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class KindergardenSocialNetworkApplication {
 
 	public static void main(String[] args) {
+		int a;
 		SpringApplication.run(KindergardenSocialNetworkApplication.class, args);
 	}
 
